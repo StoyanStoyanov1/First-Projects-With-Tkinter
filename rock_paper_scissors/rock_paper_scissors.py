@@ -70,7 +70,7 @@ def scissors():
     logic(player, computer_choices)
 
 
-rock_button = Button(root, text="Rock", font=("Arial", 30), bg="transparent", fg="black", command=rock)
+rock_button = Button(root, text="Rock", font=("Arial", 30), bg="white", fg="black", command=rock)
 paper_button = Button(root, text="Paper", font=("Arial", 30), bg="white", fg="black", command=paper)
 scissors_button = Button(root, text="Scissors", font=("Arial", 30), bg="white", fg="black", command=scissors)
 
