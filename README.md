@@ -1,1 +1,1 @@
-# Games Projeckts at a fundamental level!
+# Projeckts at a fundamental level!
