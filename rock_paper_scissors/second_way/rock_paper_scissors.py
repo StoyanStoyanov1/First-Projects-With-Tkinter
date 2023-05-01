@@ -30,22 +30,22 @@ def logic(player, computer):
         result.place_forget()
 
     if player == computer:
-        result = tk.Label(root, text=f"Draw!\nComputer: {computer}", font=("Arial", 30), fg="black", bg="blue")
-        result.place(x=120, y=220)
+        result = tk.Label(root, text=f"Computer: {computer}\nDraw!", font=("Arial", 25), fg="black", bg="orange")
+        result.place(x=10, y=200)
         root.after(1000, delete)
         draws += 1
     elif (player == "Rock" and computer == "Scissors") or \
             (player == "Paper" and computer == "Rock") or \
             (player == "Scissors" and computer == "Paper"):
-        result = tk.Label(root, text=f"You win!\nComputer: {computer}", font=("Arial", 30), fg="black", bg="green")
-        result.place(x=120, y=220)
+        result = tk.Label(root, text=f"Computer: {computer}\nYou win!", font=("Arial", 25), fg="black", bg="green")
+        result.place(x=10, y=200)
         root.after(1500, delete)
 
         wins += 1
     else:
         loses += 1
-        result = tk.Label(root, text=f"You Lose!\nComputer: {computer}", font=("Arial", 30), fg="black", bg='red')
-        result.place(x=120, y=220)
+        result = tk.Label(root, text=f"Computer: {computer}\nYou Lose!", font=("Arial", 25), fg="black", bg='red')
+        result.place(x=10, y=200)
         root.after(1500, delete)
     label.configure(text=f"Wins: {wins}\nLoses: {loses}\nDraws: {draws}")
 
@@ -67,20 +67,21 @@ def scissors():
     computer_choices = random.choice(choices)
     logic(player, computer_choices)
 
+
 rock_photo = PhotoImage(file="rock.png")
 paper_photo = PhotoImage(file="paper.png")
 scissors_photo = PhotoImage(file="scissors.png")
-reset_photo = PhotoImage(file="reset.png").subsample(4,4)
+reset_photo = PhotoImage(file="reset.png").subsample(4, 4)
 
 rock_button = Button(root, command=rock, image=rock_photo)
 paper_button = Button(root, image=paper_photo, command=paper)
 scissors_button = Button(root, image=scissors_photo, command=scissors)
 reset_button = Button(root, image=reset_photo, command=reset)
 
-rock_button.place(x=10, y=250)
-paper_button.place(x=250, y=270)
-scissors_button.place(x=240, y=1)
-reset_button.place(x=20, y=130)
+rock_button.place(x=10, y=300)
+paper_button.place(x=300, y=270)
+scissors_button.place(x=295, y=5)
+reset_button.place(x=20, y=140)
 
 label = tk.Label(root, text=f"Wins: {wins}\nLoses: {loses}\nDraws: {draws}", fg="green",
                  font=("Arial", 25))
