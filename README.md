@@ -1,1 +1,1 @@
-Projects at a fundamental level!
+First mini projects with Tkinter
